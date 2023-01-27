@@ -33,9 +33,9 @@ class Attribute extends React.Component {
 
     render() {
         return <div>
-            {this.state.name} : {this.state.value} 
-            <Button onClick={this.handleAdd} variant="outline-success">+</Button>
-            <Button onClick={this.handleSubtract} variant="outline-success">-</Button>
+            {this.state.name} : {this.state.value}
+            <Button onClick={this.handleAdd} variant="outline-success" >+</Button>
+            <Button onClick={this.handleSubtract} variant="outline-success" >-</Button>
         </div>
     }
 }
