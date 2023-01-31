@@ -6,14 +6,15 @@ class Attributes extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            buildPoints: 400
+            attributeBp: 200
         };
         
     }
     updateAttribute = (bpCost) => {
-        var newBP = this.state.buildPoints + bpCost
+        var newBP = this.state.attributeBp + bpCost
 
-        this.setState({buildPoints: newBP})
+        this.setState({attributeBp: newBP});
+        this.props.updateBp(bpCost);
     }
 
     
@@ -21,7 +22,7 @@ class Attributes extends React.Component {
         return <Card>
             <Card.Title>Attributes</Card.Title>
             <Card.Body>
-                <div>{this.state.buildPoints}</div>
+                <div>Remaining Attribute BP: {this.state.attributeBp}</div>
                 <Card style={{margin: '1rem'}}>
                     <Card.Title>Physical</Card.Title>
                     <Card.Body>
