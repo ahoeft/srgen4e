@@ -25,7 +25,8 @@ class CharGen extends React.Component {
         return <Container>
         <Row>
           <Col><div>Remaining BP:{ this.state.buildPoints}</div><Attributes updateBp={this.updateBp} /></Col>
-          <Col><ActiveSkills /> <KnowledgeSkills /></Col>
+          <Col><ActiveSkills updateBp={this.updateBp} /> </Col>
+          <Col><KnowledgeSkills /></Col>
         </Row>
       </Container>
     }
