@@ -18,7 +18,7 @@ class Attributes extends React.Component {
 
     
     render() {
-        return <Card style={{ width: '18rem', textAlign: 'left'}}>
+        return <Card>
             <Card.Title>Attributes</Card.Title>
             <Card.Body>
                 <div>{this.state.buildPoints}</div>
