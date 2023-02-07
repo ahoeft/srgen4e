@@ -10,10 +10,11 @@ class ActiveSkills extends React.Component {
         
     }
     render() {
+        const athletics = ["Climbing", "Gymnastics", "Running", "Swimming"]
         return <Card>
             <Card.Title>Active Skills</Card.Title>
             <Card.Body>
-                <SkillGroup name="Athletics (Usually Strength)" />
+                <SkillGroup name="Athletics (Usually Strength)" skills={athletics} />
                 <SkillGroup name="Biotech (Usually Logic)" />
                 <SkillGroup name="Close Combat (Agility)" />
                 <SkillGroup name="Conjuring (Magic)" />
