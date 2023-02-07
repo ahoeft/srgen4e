@@ -11,15 +11,21 @@ class SkillGroup extends React.Component {
         };
         
     }
+
+    updateSkill = (bpCost) => {
+        this.props.updateSkill(bpCost);
+    }
+
     render() {
         var mySkills = []; 
         if(this.state.skills)
         {
             mySkills = this.state.skills;
         }
+
         return <Card>
             <Card.Title>{this.state.name}</Card.Title>
-            <Card.Body>{mySkills.map(skillName => <ActiveSkill name={skillName}></ActiveSkill>)}</Card.Body>
+            <Card.Body>{mySkills.map(skillName => <ActiveSkill name={skillName} updateSkill={this.updateSkill}></ActiveSkill>)}</Card.Body>
         </Card>
     }
 }

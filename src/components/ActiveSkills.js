@@ -9,24 +9,29 @@ class ActiveSkills extends React.Component {
         };
         
     }
+
+    updateSkill = (bpCost) => {
+        this.props.updateBp(bpCost);
+    }
+
     render() {
         const athletics = ["Climbing", "Gymnastics", "Running", "Swimming"]
         return <Card>
             <Card.Title>Active Skills</Card.Title>
             <Card.Body>
-                <SkillGroup name="Athletics (Usually Strength)" skills={athletics} />
-                <SkillGroup name="Biotech (Usually Logic)" />
-                <SkillGroup name="Close Combat (Agility)" />
-                <SkillGroup name="Conjuring (Magic)" />
-                <SkillGroup name="Cracking (Logic)" />
-                <SkillGroup name="Electronics (Logic)" />
-                <SkillGroup name="Firearms (Agility)" />
-                <SkillGroup name="Influence (Charisma)" />
-                <SkillGroup name="Mechanic (Logic)" />
-                <SkillGroup name="Outdoors (Usually Intuition)" />
-                <SkillGroup name="Sorcery (Magic)" />
-                <SkillGroup name="Stealth (Usually Intuition)" />
-                <SkillGroup name="Tasking (Resonance)" />
+                <SkillGroup name="Athletics (Usually Strength)" skills={athletics} updateSkill={this.updateSkill} />
+                <SkillGroup name="Biotech (Usually Logic)" updateSkill={this.updateSkill} />
+                <SkillGroup name="Close Combat (Agility)" updateSkill={this.updateSkill} />
+                <SkillGroup name="Conjuring (Magic)" updateSkill={this.updateSkill} />
+                <SkillGroup name="Cracking (Logic)" updateSkill={this.updateSkill} />
+                <SkillGroup name="Electronics (Logic)" updateSkill={this.updateSkill} />
+                <SkillGroup name="Firearms (Agility)" updateSkill={this.updateSkill} />
+                <SkillGroup name="Influence (Charisma)" updateSkill={this.updateSkill} />
+                <SkillGroup name="Mechanic (Logic)" updateSkill={this.updateSkill} />
+                <SkillGroup name="Outdoors (Usually Intuition)" updateSkill={this.updateSkill} />
+                <SkillGroup name="Sorcery (Magic)" updateSkill={this.updateSkill} />
+                <SkillGroup name="Stealth (Usually Intuition)" updateSkill={this.updateSkill} />
+                <SkillGroup name="Tasking (Resonance)" updateSkill={this.updateSkill} />
             </Card.Body>
         </Card>
     }
