@@ -5,7 +5,7 @@ class Attribute extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            value: 0,
+            value: 1,
             name: props.name
         };
         this.handleAdd = this.handleAdd.bind(this);
@@ -27,8 +27,8 @@ class Attribute extends React.Component {
     handleSubtract() {
         var bpCost = 0;
         var current = this.state.value;
-        var newVal = 0;
-        if((current - 1) >= 0) {
+        var newVal = 1;
+        if((current - 1) >= 1) {
             newVal = current - 1;
             bpCost = 10;
         }
